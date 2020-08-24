@@ -17,7 +17,9 @@ MAGIC_ENTER_GIT_COMMAND="git status -v && echo -e '\n'"
 MAGIC_ENTER_OTHER_COMMAND="lsda && echo -e '\n'"
 
 # Plugins
-plugins=(alias-tips
+plugins=(
+    alias-tips
+    command-not-found
     dirhistory
     extract
     fancy-ctrl-z
@@ -30,7 +32,8 @@ plugins=(alias-tips
 #    web-search
     z
     zsh-autosuggestions
-    zsh-navigation-tools)
+    zsh-navigation-tools
+)
 
 
 # Theme
@@ -120,7 +123,7 @@ POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND="white"
 source $ZSH/oh-my-zsh.sh
 
 # Commands
-export EDITOR=nvim
+export EDITOR=vim
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export GREP_COLOR="1;32"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
@@ -196,7 +199,7 @@ alias shad="ssh-add ~/.ssh/id_rsa"
 alias shag='eval "$(ssh-agent -s)"'
 alias tmux="tmux -u"
 alias tmuxm="tmux new-session \; split-window -h \; split-window -v \; attach"
-alias vim="nvim"
+# alias vim="nvim"
 alias vimrc="$EDITOR ~/.vimrc"
 alias ytdl="youtube-dl"
 alias zshrc="$EDITOR ~/.zshrc"

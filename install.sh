@@ -11,4 +11,15 @@ git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/ali
 
 echo -e "\u001b[7m Installing vim Vundle plugins... \u001b[0m"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+echo -e "\u001b[7m Installing dot files... \u001b[0m"
+cp ./.gitconfig ~/
+cp ./.zshrc ~/
+cp ./.vimrc ~/
+cp ./.vimrc_tabs ~/
+
+echo -e "\u001b[7m Updating configurations... \u001b[0m"
 vim +PluginUpdate +qall
+
+echo -e "\u001b[7m Done. Please restart terminal! \u001b[0m"
+
