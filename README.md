@@ -4,8 +4,8 @@ My scripts to setup dev env for Linux workspace with ZSH, vim (tmux included) fo
 ## Installation
 1. Clone the repository
     ```
-    git clone https://github.com/alfrededison/My-Linux-Setups
-    cd My-Linux-Setups/
+    git clone https://github.com/alfrededison/My-Linux-Setups ~/.setup
+    cd ~/.setup
     ```
 2. Install requirements
 
@@ -67,7 +67,7 @@ cp extras/gotty.sh ~/
     pkg install -y tigervnc
     vncserver -localhost # press 'n'
     ```
-2. Add `export DISPLAY=":1"` to `.zshrc`
+2. Add `export DISPLAY=":1"` to `~/.custom.zsh`
 3. Install GUI app
     ```
     pkg install -y xfce4
@@ -78,7 +78,7 @@ cp extras/gotty.sh ~/
     #!/data/data/com.termux/files/usr/bin/sh
     xfce4-session &
     ```
-5. Add alias to `.zshrc`
+5. Add alias to `~/.custom.zsh`
     ```
     alias vncstart="vncserver :1"
     alias vncstop="vncserver -kill :1"

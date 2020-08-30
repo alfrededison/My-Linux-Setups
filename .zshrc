@@ -258,3 +258,7 @@ alias -s md=vim
 alias -g wcc="| wc -m"
 alias -g wcl="| wc -l"
 alias -g wcw="| wc -w"
+
+if [ -f ~/.custom.zsh ]; then
+    source ~/.custom.zsh
+fi

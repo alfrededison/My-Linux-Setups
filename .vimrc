@@ -1,79 +1,87 @@
-set nocompatible  " required
-filetype off      " required
+" turns on detection, plugin and indent all 3 at once
+filetype plugin indent on
 
-" set the runtime path to include Vundle and intialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Install plug-vim
+"---------------------------
+let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 
-" let Vundle manages Vundle, required
-Plugin 'gmarik/Vundle.vim'
+if !filereadable(vimplug_exists)
+  echo "Installing Vim-Plug..."
+  echo ""
+  silent !\curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  "let g:not_finish_vimplug = "yes"
+
+  autocmd VimEnter * PlugInstall
+endif
+
+"  Plugins
+"---------------------------
+call plug#begin("~/.vim/bundle")
 
 "> Syntax highlighting
-Plugin 'sheerun/vim-polyglot' "  language SYNTAX packs
-" Plugin 'vim-syntastic/syntastic'
+Plug 'sheerun/vim-polyglot' "  language SYNTAX packs
+" Plug 'vim-syntastic/syntastic'
 
 "> Navigation
-" Plugin 'Shougo/unite.vim'
-" Plugin 'moll/vim-node'
+" Plug 'Shougo/unite.vim'
+" Plug 'moll/vim-node'
 " OR
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-" Plugin 'preservim/nerdtree'
-Plugin 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+" Plug 'preservim/nerdtree'
+Plug 'kien/ctrlp.vim'
 
 " + YouCompleteMe
-" Plugin 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 
 "> Coding
-Plugin 'w0rp/ale' " Syntax linter
-" Plugin 'dense-analysis/ale'
-Plugin 'Chiel92/vim-autoformat' " spaces/braces etc. (ESlint/gofmt)
-Plugin 'Valloric/MatchTagAlways' " highlight enclosing tags
-" Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'w0rp/ale' " Syntax linter
+" Plug 'dense-analysis/ale'
+Plug 'Chiel92/vim-autoformat' " spaces/braces etc. (ESlint/gofmt)
+Plug 'Valloric/MatchTagAlways' " highlight enclosing tags
+" Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'terryma/vim-multiple-cursors'
 
 "> Javascript
-Plugin 'SirVer/ultisnips' " base
-" Plugin 'honza/vim-snippets' " html C etc...
-Plugin 'epilande/vim-es2015-snippets' " es6
-Plugin 'epilande/vim-react-snippets' " react
-Plugin 'alexbyk/vim-ultisnips-js-testing' " mocha/jasmine
-" Plugin 'leafgarland/typescript-vim'
-" Plugin 'pangloss/vim-javascript'
-" Plugin 'maxmellon/vim-jsx-pretty'
+Plug 'SirVer/ultisnips' " base
+" Plug 'honza/vim-snippets' " html C etc...
+Plug 'epilande/vim-es2015-snippets' " es6
+Plug 'epilande/vim-react-snippets' " react
+Plug 'alexbyk/vim-ultisnips-js-testing' " mocha/jasmine
+" Plug 'leafgarland/typescript-vim'
+" Plug 'pangloss/vim-javascript'
+" Plug 'maxmellon/vim-jsx-pretty'
 
 "> Python
-Plugin 'zchee/deoplete-jedi', " https://github.com/zchee/deoplete-jedi
-Plugin 'jmcantrell/vim-virtualenv', " https://github.com/jmcantrell/vim-virtualenv
-Plugin 'ehamberg/vim-cute-python', " use unicode characters for several built-in functions and operators
-" Plugin 'vim-scripts/indentpython.vim'
-" Plugin 'nvie/vim-flake8'
+Plug 'zchee/deoplete-jedi', " https://github.com/zchee/deoplete-jedi
+Plug 'jmcantrell/vim-virtualenv', " https://github.com/jmcantrell/vim-virtualenv
+Plug 'ehamberg/vim-cute-python', " use unicode characters for several built-in functions and operators
+" Plug 'vim-scripts/indentpython.vim'
+" Plug 'nvie/vim-flake8'
 
 "> Airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 "> Version control
-Plugin 'tpope/vim-fugitive' " Git wrapper
-Plugin 'airblade/vim-gitgutter' " Git diff
+Plug 'tpope/vim-fugitive' " Git wrapper
+Plug 'airblade/vim-gitgutter' " Git diff
 
 "> Misc
-Plugin 'skielbasa/vim-material-monokai'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'Raimondi/delimitMate' " auto-completion for quotes, parens, brackets, etc
-Plugin 'mattn/gist-vim'
-Plugin 'tmux-plugins/vim-tmux'
+Plug 'skielbasa/vim-material-monokai'
+Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'Raimondi/delimitMate' " auto-completion for quotes, parens, brackets, etc
+Plug 'mattn/gist-vim'
+Plug 'tmux-plugins/vim-tmux'
 
 " Neovim
-" Plugin 'Shougo/deoplete.nvim'
-" Plugin 'roxma/nvim-yarp'
-" Plugin 'roxma/vim-hug-neovim-rpc'
+" Plug 'Shougo/deoplete.nvim'
+" Plug 'roxma/nvim-yarp'
+" Plug 'roxma/vim-hug-neovim-rpc'
 
-call vundle#end()
-
-" turns on detection, plugin and indent all 3 at once
-filetype plugin indent on " required
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
 
 " Settings
 "---------------------------
