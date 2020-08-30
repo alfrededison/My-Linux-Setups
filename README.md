@@ -53,6 +53,7 @@ My scripts to setup dev env for Linux workspace with ZSH, vim (tmux included) fo
     cp .tmux.conf ~/
     ```
 3. Enable zsh plugins and vim plugins for tmux (DIY).
+
 ### Gotty for web ssh
 ```
 pkg install -y openssh gotty
@@ -60,26 +61,17 @@ cp extras/.gotty ~/
 cp extras/gotty.sh ~/
 #to run: ~/gotty.sh
 ```
+
 ### Vnc for termux
-1. Install dependencies
+1. Install
     ```
-    pkg install -y x11-repo
-    pkg install -y tigervnc
-    vncserver -localhost # press 'n'
+    ./extras/vnc.sh
     ```
-2. Add `export DISPLAY=":1"` to `~/.custom.zsh`
-3. Install GUI app
+2. Use vncstart to start VNC session, and vncstop to stop it.
+3. Use VNC on computer (optional)
+    3.1 Connect with adb
+    3.2 Forward port
     ```
-    pkg install -y xfce4
-    pkg install -y xfce4-terminal geany aterm
+    adb forward tcp:5901 tcp:5901
     ```
-4. VNC server startup configuration (~/.vnc/xstartup) should contain only
-    ```
-    #!/data/data/com.termux/files/usr/bin/sh
-    xfce4-session &
-    ```
-5. Add alias to `~/.custom.zsh`
-    ```
-    alias vncstart="vncserver :1"
-    alias vncstop="vncserver -kill :1"
-    ```
+4. Connect VNC to local address with port 5901
