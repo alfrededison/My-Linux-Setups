@@ -50,9 +50,11 @@ My scripts to setup dev env for Linux workspace with ZSH, vim (tmux included) fo
 2. Install plugins
     ```
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    cp .tmux.conf ~/
+    ln -sf ~/.setup/.tmux.conf ~/
+    tmux # to open tmux
     ```
-3. Enable zsh plugins and vim plugins for tmux (DIY).
+3. Press `<prefix> + I` (prefix set to Ctrl-a, with capital i, as in Install) to fetch the plugin.
+4. Enable zsh plugins and vim plugins for tmux (DIY).
 
 ### Gotty for web ssh
 ```
