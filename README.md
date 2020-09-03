@@ -38,7 +38,7 @@ My scripts to setup dev env for Linux workspace with ZSH, vim (tmux included) fo
     ```
 5. Install you-complete-me for vim (optional but recommended)
     ```
-    ./ycm.sh
+    ./extras/ycm.sh
     ```
     If you need more language supported, please refer to plugin's homepage.
 6. Enjoy!
@@ -49,20 +49,10 @@ My scripts to setup dev env for Linux workspace with ZSH, vim (tmux included) fo
 1. Install `tmux`
 2. Install plugins
     ```
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    ln -sf ~/.setup/.tmux.conf ~/
-    tmux # to open tmux
+    ./extras/tmux.sh
     ```
-3. Press `<prefix> + I` (prefix set to Ctrl-a, with capital i, as in Install) to fetch the plugin.
-4. Enable zsh plugins and vim plugins for tmux (DIY).
-
-### Gotty for web ssh
-```
-pkg install -y openssh gotty
-cp extras/.gotty ~/
-cp extras/gotty.sh ~/
-#to run: ~/gotty.sh
-```
+3. Follow script instruction to finish installation.
+5. Enable zsh plugins and vim plugins for tmux (DIY, but actually vim plugin is already included).
 
 ### Vnc for termux
 1. Install
@@ -77,3 +67,11 @@ cp extras/gotty.sh ~/
     adb forward tcp:5901 tcp:5901
     ```
 4. Connect VNC to local address with port 5901
+
+### Gotty for web ssh
+```
+pkg install -y openssh gotty
+cp extras/gotty/.gotty ~/
+cp extras/gotty/gotty.sh ~/
+#to run: ~/gotty.sh
+```
