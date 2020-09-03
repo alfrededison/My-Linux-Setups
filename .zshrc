@@ -233,6 +233,7 @@ alias ffil="find . -type f -name"
 alias gcma="git commit --amend -m"
 alias gdh="git diff HEAD"
 alias gmv="git mv"
+alias grso="git reset --hard origin/master"
 alias gtop='cd "$(git rev-parse --show-toplevel)"'
 alias grep="grep --color=auto"
 alias la="ls -AXb --group-directories-first --sort=extension"
@@ -252,6 +253,7 @@ alias tmuxm="tmux new-session \; split-window -h \; split-window -v \; attach"
 # alias vim="nvim"
 alias vimrc="$EDITOR ~/.vimrc"
 alias zshrc="$EDITOR ~/.zshrc"
+alias customzsh="$EDITOR ~/.custom.zsh"
 
 alias -s md=vim
 
