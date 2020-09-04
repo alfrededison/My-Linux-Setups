@@ -6,7 +6,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo -e "\u001b[7m Copying conf files...\u001b[0m"
 ln -sf ~/.setup/extras/.tmux.conf ~/
 
-# echo -e "Run \u001b[7m tmux source ~/.tmux.conf \u001b[0m to update tmux config";
 echo -e "Then Press \u001b[7m Ctrl-a I \u001b[0m to install plugins, then QUIT tmux to continue installation."
 
 read -p "Press any key to continue... " -n1 -s
