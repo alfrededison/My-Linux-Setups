@@ -5,6 +5,7 @@ mkdir -p ~/.termux
 cp ~/.setup/extras/colors.properties ~/.termux/
 
 echo -e "\u001b[7m Installing dependencies...\u001b[0m"
-pkg install -y curl zsh vim-python python cmake nodejs-lts
+pkg update -y
+pkg install -y curl zsh vim-python python cmake build-essential nodejs-lts
 
 echo -e "\u001b[7m Done.\u001b[0m"
