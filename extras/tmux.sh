@@ -14,5 +14,6 @@ tmux
 echo -e "\u001b[7m Updating alias...\u001b[0m"
 printf "alias tmuxrc=\"\$EDITOR ~/.tmux.conf\"\n" >> ~/.custom.zsh
 printf "alias tmuxreload=\"tmux source ~/.tmux.conf\"\n" >> ~/.custom.zsh
+printf "alias tmuxcustom=\"\$EDITOR ~/.custom.tmux.conf\"\n" >> ~/.custom.zsh
 
 echo -e "\u001b[7m Done! Please restart tmux.\u001b[0m"

@@ -253,7 +253,7 @@ alias tmuxm="tmux new-session \; split-window -h \; split-window -v \; attach"
 # alias vim="nvim"
 alias vimrc="$EDITOR ~/.vimrc"
 alias zshrc="$EDITOR ~/.zshrc"
-alias customzsh="$EDITOR ~/.custom.zsh"
+alias zshcustom="$EDITOR ~/.custom.zsh"
 
 alias -s md=vim
 
