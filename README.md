@@ -52,7 +52,6 @@ My scripts to setup dev env for Linux workspace with ZSH, vim (tmux included) fo
     ./extras/tmux.sh
     ```
 3. Follow script instruction to finish installation.
-5. Enable zsh plugins and vim plugins for tmux (DIY, but actually vim plugin is already included).
 
 ### Vnc for termux
 1. Install

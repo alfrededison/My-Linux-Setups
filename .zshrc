@@ -65,18 +65,18 @@ plugins=(
     alias-tips
     command-not-found
     dirhistory
-    extract
-    fancy-ctrl-z
-#    fasd
     fast-syntax-highlighting
     git
-#    globalias
-#    magic-enter
-#    tmux
-#    web-search
-    z
+    tmux
     zsh-autosuggestions
     zsh-navigation-tools
+    fancy-ctrl-z
+    extract
+    z
+    # fasd
+    # globalias
+    # magic-enter
+    # web-search
 )
 
 # Theme
