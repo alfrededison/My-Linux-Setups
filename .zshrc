@@ -70,6 +70,7 @@ plugins=(
     tmux
     zsh-autosuggestions
     zsh-navigation-tools
+    # fzf-zsh-plugin
     fancy-ctrl-z
     extract
     z
