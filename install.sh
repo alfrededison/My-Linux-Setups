@@ -11,6 +11,7 @@ git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/theme
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
 git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
+git clone https://github.com/unixorn/fzf-zsh-plugin.git ~/.oh-my-zsh/custom/plugins/fzf-zsh-plugin
 
 echo -e "\u001b[7m Installing dot files...\u001b[0m"
 ln -sf ~/.setup/.gitconfig ~/
