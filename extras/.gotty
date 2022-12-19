@@ -1,5 +1,0 @@
-// hterm preferences
-preferences {
-	background_color = "rgb(16, 16, 32)"
-	font_family = "'MesloLGS NF', 'DejaVu Sans Mono', 'Everson Mono', FreeMono, 'Menlo', 'Terminal', monospace"
-}
