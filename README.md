@@ -32,7 +32,8 @@ My scripts to setup dev env for Linux workspace
     ```
     ./install-omz.sh
     ```
-5. Install vimrc
+5. Install [common dotfiles](https://github.com/alfrededison/dotfiles).
+6. Install vimrc
     ```
     ./install-vimrc.sh
     ```
@@ -40,8 +41,8 @@ My scripts to setup dev env for Linux workspace
         ```
         ./install-vimrc-ycm.sh
         ```
-        If you need more language supported, please refer to plugin's homepage.
-6. Vnc for termux
+    2. If you need more language supported, please refer to plugin's homepage.
+7. Vnc for termux
     1. Install
         ```
         ./install-termux-vnc.sh
@@ -54,4 +55,4 @@ My scripts to setup dev env for Linux workspace
         adb forward tcp:5901 tcp:5901
         ```
     4. Connect VNC to local address with port 5901
-7. Enjoy!
+8. Enjoy!
